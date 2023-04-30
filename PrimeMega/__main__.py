@@ -84,30 +84,30 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*👋🏻 ʜᴇʟʟᴏ {} *
-ᴍʏ ɴᴀᴍᴇ ɪꜱ ᴢᴇɴɪᴛꜱᴜ [✨](https://telegra.ph/file/f268a324304deaa0f0180.jpg)
-ᴍᴇ ɪꜱ ᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ + ᴍᴜꜱɪᴄ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡᴇʟʟ.
+*👋🏻 Hello {} *
+Selamat datang di Hancock Robot [✨](https://telegra.ph/file/f268a324304deaa0f0180.jpg)
+Aku adalah bot terlengkap dan aman untuk mengelola grup kalian
 ──────────────────────
 × `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
 ──────────────────────
-ᴛᴇᴋᴀɴ /help ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀꜰᴛᴀʀ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴛᴇʀꜱᴇᴅɪᴀ.
+Tekan /help dan /mhelp untuk melihat perintah yang tersedia
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴢᴇɴɪᴛꜱᴜ ➕️", url="t.me/ZeniitsuRobot?startgroup=true"
+            text="➕️ Bawa Aku ke Rumahmu ➕️", url="t.me/Hancock_Robot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="💌 ɢʀᴏᴜᴘ", url="t.me/ZennXSupport"
+        InlineKeyboardButton(text="💌 Group", url="t.me/Virtual_executive"
         ),
         InlineKeyboardButton(
-            text="📣 ᴄʜᴀɴɴᴇʟ", url="t.me/zennih"
+            text="📣 Channel", url="t.me/nakama_asl"
         ),
     ],
     [
-        InlineKeyboardButton(text="❓ ʙᴀɴᴛᴜᴀɴ", callback_data="prime_support"
+        InlineKeyboardButton(text="❓ Bantuan", callback_data="prime_support"
        ),
 
     ],
@@ -115,7 +115,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage bot Zenitsu.
+Klik tombol di bawah ini untuk mendapatkan deskripsi tentang fitur manage Hancock Robot.
 
 ✪ /start : Mulai Aku!! ✨
 ✪ /help : Perintah Untuk Membantu Anda
@@ -370,7 +370,7 @@ def prime_about_callback(update, context):
     if query.data == "prime_":
         query.message.edit_text(
             text="🎧 Bantuan Perintah Music."
-            "\npilih menu di bawah ini untuk melihat bantuan Music Zenitsu ",
+            "\npilih menu di bawah ini untuk melihat bantuan Music Hancock Robot ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -429,7 +429,7 @@ def prime_about_callback(update, context):
             "\n • /authusers - Periksa DAFTAR AUTH grup",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="prime_")]]
+                [[InlineKeyboardButton(text="⭅ Kembali", callback_data="prime_")]]
             ),
         )
     elif query.data == "prime_notes":
@@ -444,22 +444,22 @@ def prime_about_callback(update, context):
             "\n\n • /queue or /cqueue- Periksa Daftar Antrian Musik",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="prime_")]]
+                [[InlineKeyboardButton(text="⭅ Kembali", callback_data="prime_")]]
             ),
         )
     elif query.data == "prime_support":
         query.message.edit_text(
-            text="*Bantuan Perintah Zenitsu* [📝](https://telegra.ph/file/54e99512efd4369194e16.jpg)"
+            text="*Bantuan Perintah Hancock Robot* [📝](https://telegra.ph/file/54e99512efd4369194e16.jpg)"
             "\npilih tombol dibawah untuk melihat bantuan perintah Zenitsu",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="🎧ᴍᴜsɪᴄ", callback_data="prime_"),
-                    InlineKeyboardButton(text="🤖ᴍᴀɴᴀɢᴇ", callback_data="prime_back"),
+                    InlineKeyboardButton(text="🎧 Music", callback_data="prime_"),
+                    InlineKeyboardButton(text="🤖 Manage", callback_data="prime_back"),
                  ],
                  [
-                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="prime_back"),
+                    InlineKeyboardButton(text="⭅ Kembali", callback_data="prime_back"),
                  
                  ]
                 ]
@@ -493,7 +493,7 @@ def prime_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="prime_")
+                    InlineKeyboardButton(text="⭅ Kembali", callback_data="prime_")
                  ]
                 ]
             ),
@@ -522,7 +522,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="prime_")
+                    InlineKeyboardButton(text="⭅ Kembali", callback_data="prime_")
                  ]
                 ]
             ),
@@ -591,7 +591,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="prime_support")]]
+                [[InlineKeyboardButton(text="⭅ Kembali", callback_data="prime_support")]]
             ),
         )
 
