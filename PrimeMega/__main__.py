@@ -85,7 +85,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *👋🏻 Hello {} *
-Selamat datang di Hancock Robot [✨](https://telegra.ph/file/f268a324304deaa0f0180.jpg)
+Selamat datang di Hancock Robot [✨](https://telegra.ph/file/2f2ae512c18e063887dfb.jpg)
 Aku adalah bot terlengkap dan aman untuk mengelola grup kalian
 ──────────────────────
 × `{}` *ᴜꜱᴇʀꜱ, ᴀᴄʀᴏꜱꜱ* `{}` *ᴄʜᴀᴛꜱ.*
@@ -324,7 +324,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="⭅ Kembali", callback_data="help_back")]]
                 ),
             )
 
@@ -449,7 +449,7 @@ def prime_about_callback(update, context):
         )
     elif query.data == "prime_support":
         query.message.edit_text(
-            text="*Bantuan Perintah Hancock Robot* [📝](https://telegra.ph/file/54e99512efd4369194e16.jpg)"
+            text="*Bantuan Perintah Hancock Robot* [📝](https://telegra.ph/file/2f2ae512c18e063887dfb.jpg)"
             "\npilih tombol dibawah untuk melihat bantuan perintah Zenitsu",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
