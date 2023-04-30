@@ -208,7 +208,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="⭅ Kembali", callback_data="help_back")]]
                     ),
                 )
 
@@ -376,15 +376,15 @@ def prime_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="ᴘᴇʀɪɴᴛᴀʜ ᴀᴅᴍɪɴ", callback_data="prime_admin"),
-                    InlineKeyboardButton(text="ᴘᴇʀɪɴᴛᴀʜ ʙᴏᴛ", callback_data="prime_notes"),
+                    InlineKeyboardButton(text="Perintah Admin", callback_data="prime_admin"),
+                    InlineKeyboardButton(text="Perintah Bot", callback_data="prime_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="ᴘᴇʀɪɴᴛᴀʜ ᴘʟᴀʏ", callback_data="source_"),
-                    InlineKeyboardButton(text="ᴘᴇʀɪɴᴛᴀʜ ᴇxsᴛʀᴀ", callback_data="prime_credit"),
+                    InlineKeyboardButton(text="Perintah Play", callback_data="source_"),
+                    InlineKeyboardButton(text="Perintah Ekstra", callback_data="prime_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="⭅ ᴋᴇᴍʙᴀʟɪ", callback_data="prime_support"),
+                    InlineKeyboardButton(text="⭅ Kembali", callback_data="prime_support"),
                  ]
                 ]
             ),
@@ -570,7 +570,7 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʙᴀɴᴛᴜᴀɴ ᴘᴇʀɪɴᴛᴀʜ ↗️",
+                            text="Bantuan Perintah ↗️",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
